@@ -23,7 +23,7 @@ const Header = () => {
   
   return (
     <header>
-      <nav className="bg-white border-gray-200 dark:bg-gray-900">
+      <nav className="bg-white border-b-2 border-gray-200 dark:bg-gray-900 dark:border-b-1 dark:border-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link to="Cinemate.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="/src/assets/AiLogo.png" className="h-8" alt="Flowbite Logo" />
