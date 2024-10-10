@@ -2,7 +2,7 @@
 export const MovieList = () => {
   return (
     <main>
-      <div className="text-9xl">
+      <div className="text-">
         MovieList
       </div>
     </main>
