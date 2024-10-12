@@ -5,7 +5,9 @@ export {
   HamburgerIcon,
   SmallSearchIcon,
   SearchIcon,
+  ArrowIcon,
 } from "./Svg";
 export { default as Card } from "./Card";
 export { default as Footer } from "./Footer";
 export { default as Header } from "./Header";
+export { MovieList } from "./MovieList";
