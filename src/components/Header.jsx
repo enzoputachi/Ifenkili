@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink, useNavigate } from "react-router-dom"
 import { HamburgerIcon, MoonIcon, SearchIcon, SmallSearchIcon, SunIcon2 } from "./Svg";
 
 
 const Header = () => {
+  const navigate = useNavigate();
   const [darkMode, setDarkmode] = useState( JSON.parse(localStorage.getItem("darkMode")) || true)
 
   const activeClass = "text-base block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
@@ -19,7 +20,16 @@ const Header = () => {
     } else {
       document.documentElement.classList.remove('dark')
     }
-  }, [darkMode])
+  }, [darkMode]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const queryTerm = e.target.search.value;
+    e.target.reset();
+
+    return navigate(`/search?q=${queryTerm}`);
+  }
   
   return (
     <header>
@@ -60,12 +70,15 @@ const Header = () => {
                 <SmallSearchIcon />
                 <span className="sr-only">Search icon</span>
               </div>
-              <input
-                type="text"
-                id="search-navbar"
-                className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Search..."
-              />
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  name="search"
+                  id="search-navbar"
+                  className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Search..."
+                />
+              </form>
             </div>
 
             {/* Mobile Hambugger */}
@@ -92,12 +105,15 @@ const Header = () => {
               <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                 <SearchIcon />
               </div>
+              <form onSubmit={handleSubmit}>
               <input
-                type="text"
-                id="search-navbar"
-                className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Search..."
-              />
+                  type="text"
+                  name="search"
+                  id="search-navbar"
+                  className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Search..."
+                />
+              </form>
             </div>
 
             {/* NavLinks */}

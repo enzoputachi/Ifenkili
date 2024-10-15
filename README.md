@@ -28,3 +28,10 @@ A react router hook that allows you to read and manipulate the query string in  
 3. To read query: `searchParams.get('q')`
 
 4. To update query: `setSearchParams`
+
+# useNavigate hook
+
+
+## Tailwind CSS Customization
+
+    1. Customize screen size: define a custome range {min and max}
