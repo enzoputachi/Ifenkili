@@ -1,3 +1,6 @@
+export {default as MovieInfo} from "./MovieInfo";
+
+export {default as Button} from "./HomeButton";
 export {
   MoonIcon,
   SunIcon2,

@@ -7,7 +7,13 @@ const Card = ({movie}) => {
   return (
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-3">
       <Link to={`/movie/${id}`}>
-        <img className="rounded-t-lg" src={image} alt="" />
+        {image ? (
+          <img className="rounded-t-lg" src={image} alt="" />
+        ) : (
+          <div className="h-64 flex items-center justify-center bg-gray-300 rounded-t-lg text-gray-500 dark:bg-gray-700 dark:text-gray-400">
+            No image available
+          </div>
+        )}
       </Link>
       <div className="p-5">
         <Link to={`/movie/${id}`}>
@@ -15,7 +21,9 @@ const Card = ({movie}) => {
             {original_title}
           </h5>
         </Link>
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{overview}</p>
+        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          {overview}
+        </p>
       </div>
     </div>
   );

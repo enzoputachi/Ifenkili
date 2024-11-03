@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export const useFetch = ({ apiPath }, queryTerm="") => {
+export const useFetch = (apiPath , queryTerm="") => {
     // console.log(apiPath);
     
     const [data, setData] = useState([]);

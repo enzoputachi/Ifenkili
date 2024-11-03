@@ -11,7 +11,10 @@ export default {
       },
       colors: {
         darkbg: "#1E293B",
-      }
+      },
+      fontFamily: {
+        tangerine: ['Tangerine'],
+      },
     }
   },
   plugins: [],
