@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom"
 import { HamburgerIcon, MoonIcon, SearchIcon, SmallSearchIcon, SunIcon2 } from "./Svg";
+import AiLogo from '../assets/AiLogo.png'
 
 
 const Header = () => {
@@ -36,7 +37,9 @@ const Header = () => {
       <nav className="bg-white border-b-2 border-gray-200 dark:bg-gray-900 dark:border-b-1 dark:border-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="/src/assets/AiLogo.png" className="h-8" alt="Ifenkili Logo" />
+            <img src={AiLogo} className="h-8" alt="Ifenkili Logo" />
+            <link rel="icon" type="image/svg+xml" href="/src/assets/AiLogo.png" />
+
             <span className="self-center text-3xl font-semibold whitespace-nowrap dark:text-white font-tangerine">Ifenkili</span>
           </Link>
 
