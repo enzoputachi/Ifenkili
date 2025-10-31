@@ -14,8 +14,7 @@ export const MovieDetail = () => {
       const response = await fetch(`https://api.themoviedb.org/3/movie/${params.id}?api_key=22333d299126dd69d313ae85dbed84f5`)
       const json = await response.json();
       setMovie(json)
-      console.log(json);
-      
+      console.log(json);      
     }
 
     fetchMovie();
@@ -55,7 +54,7 @@ export const MovieDetail = () => {
           <MovieInfo label="Budget:">{movie.budget}</MovieInfo>
           <MovieInfo label="Revenue:">{movie.revenue}</MovieInfo>
           <MovieInfo label="Release Date:">{movie.release_date}</MovieInfo>
-          <MovieInfo label="IMDB Code:"><a href={`https://www.imdb.com/title/${movie.imdb_id}`} target="_blank" rel="noreferrer">{movie.imdb_id}</a></MovieInfo>
+          <MovieInfo label="IMDB Code:"><a href={`https://www.imdb.com/title/${movie.imdb_id}`} target="_blank" rel="noreferrer" className="text-green-400">{movie.imdb_id}</a></MovieInfo>
         </div>
       </section>
     </main>

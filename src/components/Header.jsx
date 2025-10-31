@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom"
 import { HamburgerIcon, MoonIcon, SearchIcon, SmallSearchIcon, SunIcon2 } from "./Svg";
-import AiLogo from '../assets/AiLogo.png'
+import AiLogo from '../assets/AiLogo.jpg'
 
 
 const Header = () => {
