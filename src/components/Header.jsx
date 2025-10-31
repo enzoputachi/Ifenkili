@@ -38,7 +38,7 @@ const Header = () => {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img src={AiLogo} className="h-8" alt="Ifenkili Logo" />
-            <link rel="icon" type="image/svg+xml" href="/src/assets/AiLogo.png" />
+            <link rel="icon" type="image/svg+xml" href="/src/assets/AiLogo.jpg" />
 
             <span className="self-center text-3xl font-semibold whitespace-nowrap dark:text-white font-tangerine">Ifenkili</span>
           </Link>
